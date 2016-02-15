@@ -1,5 +1,13 @@
-import Glibc
+/**
+ *  main.swift
+ */
 
-let randomNumber = random() % 10
+let args = Process.arguments
 
-print("Hello! Here's a random number for you: \(randomNumber).")
+if args.count < 2 {
+    print("Swifting usage: Swifting <a name>")
+} else {
+    let name = args[1]
+    let randomNumber = rnd()
+    print("Hello, \(name)!\n\nHere's a random number for you: \(randomNumber).")
+}
